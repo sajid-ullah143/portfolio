@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Admin</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+
+  <div class="admin-container">
+
+    <div id="loginBox" class="login-box">
+      <h2>Admin Login</h2>
+
+      <input type="text" id="adminUsername" placeholder="Username" />
+      <input type="password" id="adminPassword" placeholder="Password" />
+
+      <button onclick="loginAdmin()">Login</button>
+    </div>
+
+    <div id="dashboard" class="dashboard hidden">
+      <div class="topbar">
+        <h1>Portfolio Admin Dashboard</h1>
+        <button onclick="logoutAdmin()">Logout</button>
+      </div>
+
+      <div class="admin-section">
+        <h2>Received Messages</h2>
+        <div id="messagesList"></div>
+      </div>
+
+      <div class="admin-section">
+        <h2>Add New Project</h2>
+
+        <form id="projectForm">
+          <input type="text" id="projectTitle" placeholder="Project Title" required />
+          <textarea id="projectDescription" placeholder="Project Description" required></textarea>
+          <input type="text" id="projectTech" placeholder="Technologies e.g. HTML | CSS | JS" required />
+          <input type="text" id="projectLink" placeholder="Project Link Optional" />
+          <button type="submit">Add Project</button>
+        </form>
+
+        <h3>All Projects</h3>
+        <div id="projectsList"></div>
+      </div>
+
+      <div class="admin-section">
+        <h2>Manage Portfolio Details</h2>
+
+        <form id="settingsForm">
+          <textarea id="aboutInput" placeholder="About Me"></textarea>
+          <input type="text" id="skillsInput" placeholder="Skills separated by comma" />
+          <input type="email" id="emailInput" placeholder="Email" />
+          <input type="text" id="locationInput" placeholder="Location" />
+          <input type="text" id="linkedinInput" placeholder="LinkedIn URL" />
+          <input type="text" id="githubInput" placeholder="GitHub URL" />
+
+          <button type="submit">Update Details</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
